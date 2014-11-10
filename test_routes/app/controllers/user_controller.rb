@@ -28,4 +28,9 @@ class UserController < ApplicationController
 			flash[:note] = "修改失败"
 		end
 	end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+  end
 end
